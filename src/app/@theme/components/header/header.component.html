@@ -1,0 +1,20 @@
+<div class="header-container"
+     [class.left]="position === 'normal'"
+     [class.right]="position === 'inverse'">
+  <div class="logo-containter">
+    <a (click)="toggleSidebar()" href="#" class="navigation"><i class="nb-menu"></i></a>
+    <div class="logo" (click)="goToHome()"><span>SkyLight</span></div>
+  </div>
+</div>
+
+<nb-actions
+size="medium"
+class="header-container"
+[class.right]="position === 'normal'"
+[class.left]="position === 'inverse'">
+<nb-action class="control-item toggle-layout" icon="nb-power" (click)="showLargeModal()" [hidden]="currentUser != undefined" ></nb-action>
+<nb-action class="control-item toggle-layout" icon="nb-close" (click)="logout()" [hidden]="currentUser == undefined" ></nb-action>
+</nb-actions>
+
+
+    
